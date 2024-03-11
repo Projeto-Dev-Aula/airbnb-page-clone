@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -5,6 +7,7 @@
   text-decoration: none;
   color: #000;
   scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
 }
 
 article, aside, details, figcaption, figure,
@@ -28,4 +31,64 @@ blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
+}
+.main-menu{
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  justify-content: space-around;
+}
+.menu{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0,0,0,0.15) 0 1px 1px;
+  padding: 20px 0px 20px 100px;
+}
+.menu .menu-upper-bar{
+  display: flex;
+  border: 1px solid #dddddd;
+  border-radius: 30px;
+  padding: 10px 7px 10px 7px;
+  align-items: center;
+}
+.menu .menu-upper-bar a{
+  text-decoration: none;
+  margin: 0px 16px 0px 16px;
+}
+.menu .menu-upper-bar .menu-upper-bar-txt-1{
+  color: black;
+}
+.menu .menu-upper-bar .menu-upper-bar-txt-2{
+  color: #717171;
+}
+.menu .menu-upper-bar .menu-search{
+  display: flex;
+  align-items: center;
+}
+.menu .menu-upper-bar .menu-search .menu-search-icon{
+  background-color: #FF385C;
+  color: white;
+  padding: 10px;
+  border-radius: 100px;
+}
+.menu .menu-right-bar{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.menu .menu-right-bar p{
+  margin: 0;
+}
+.menu .menu-hmbr{
+  display: flex;
+  align-items: center;
+  padding: 8px 8px 8px 14px;
+  border: 1px solid #dddddd;
+  border-radius: 30px;
+}
+.menu .menu-hmbr .menu-user-icon{
+  width: 32px !important;
+  margin-left: 10px;
 }
