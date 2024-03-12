@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@font-face {
+  font-family: 'Cereal';
+  src: url('../fonts/Cereal/AirbnbCereal_W_Lt.otf') format('opentype'),
+  url('../fonts/Cereal/AirbnbCereal_W_Blk.otf') format('opentype'),
+  url('../fonts/Cereal/AirbnbCereal_W_Bk.otf') format('opentype'),
+  url('../fonts/Cereal/AirbnbCereal_W_Bd.otf') format('opentype'),
+  url('../fonts/Cereal/AirbnbCereal_W_Md.otf') format('opentype'),
+  url('../fonts/Cereal/AirbnbCereal_W_XBd.otf') format('opentype');
+  font-display: swap;
+}
 
 * {
   padding: 0;
@@ -7,7 +16,7 @@
   text-decoration: none;
   color: #000;
   scroll-behavior: smooth;
-  font-family: "Roboto", sans-serif;
+  font-family: "Cereal", sans-serif;
 }
 p{
   margin: 0;
@@ -53,31 +62,36 @@ q:after {
 .main-menu {
   width: 100%;
   height: 80px;
-  align-items: center;
-  justify-content: space-around;
+  box-shadow: rgba(0,0,0,0.08) 0 1px 1px;
 }
 
 .menu {
-  width: 100%;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.15) 0 1px 1px;
-  padding: 20px 150px 20px 150px;
+  padding: 14px 0;
 }
 
 .menu .menu-upper-bar {
   display: flex;
   border: 1px solid #dddddd;
   border-radius: 30px;
-  padding: 10px 7px 10px 7px;
   align-items: center;
-  margin-left: 170px;
+  margin: 0 24px 0 180px;
+  padding: 0 8px;
+  height: 48px;
 }
 
 .menu .menu-upper-bar a {
   text-decoration: none;
-  margin: 0px 16px 0px 16px;
+  padding: 0 16px 0 16px;
+  font-size: 14px;
+}
+
+.menu .menu-upper-bar a:nth-child(2) {
+  border-left: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
 }
 
 .menu .menu-upper-bar .menu-upper-bar-txt-1 {
@@ -123,10 +137,9 @@ q:after {
   margin-left: 10px;
 }
 
-main{
-  width: 80%;
+main {
   margin: 0 auto;
-  padding-top: 40px;
+  padding: 40px 0 0 0 !important;
 }
 main .box-title .box-title-txt-icon{
   display: flex;
@@ -143,8 +156,10 @@ main .photos .img5 img{
 }
 main .main-photos-show-photos{
   display: flex;
-  transform: translateY(-60px);
-  margin-left: 950px;
+  position: absolute;
+  right: 320px;
+  top: 500px;
+  cursor: pointer;
   background-color: white;
   width: fit-content;
   padding: 10px 15px 10px 15px;
@@ -194,6 +209,12 @@ main .main-photos-show-photos{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
+  transition: filter 0.3s;
+}
+
+.photos img:hover {
+  filter: brightness(80%);
 }
 
 .photos .img1 {
