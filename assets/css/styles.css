@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Cereal';
   src: url('../fonts/Cereal/AirbnbCereal_W_Lt.otf') format('opentype'),
-  url('../fonts/Cereal/AirbnbCereal_W_Blk.otf') format('opentype'),
-  url('../fonts/Cereal/AirbnbCereal_W_Bk.otf') format('opentype'),
-  url('../fonts/Cereal/AirbnbCereal_W_Bd.otf') format('opentype'),
-  url('../fonts/Cereal/AirbnbCereal_W_Md.otf') format('opentype'),
-  url('../fonts/Cereal/AirbnbCereal_W_XBd.otf') format('opentype');
+    url('../fonts/Cereal/AirbnbCereal_W_Blk.otf') format('opentype'),
+    url('../fonts/Cereal/AirbnbCereal_W_Bk.otf') format('opentype'),
+    url('../fonts/Cereal/AirbnbCereal_W_Bd.otf') format('opentype'),
+    url('../fonts/Cereal/AirbnbCereal_W_Md.otf') format('opentype'),
+    url('../fonts/Cereal/AirbnbCereal_W_XBd.otf') format('opentype');
   font-display: swap;
 }
 
@@ -18,7 +18,8 @@
   scroll-behavior: smooth;
   font-family: "Cereal", sans-serif;
 }
-p{
+
+p {
   margin: 0;
   padding: 0;
 }
@@ -62,7 +63,7 @@ q:after {
 .main-menu {
   width: 100%;
   height: 80px;
-  box-shadow: rgba(0,0,0,0.08) 0 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0 1px 1px;
 }
 
 .menu {
@@ -141,20 +142,25 @@ main {
   margin: 0 auto;
   padding: 40px 0 0 0 !important;
 }
-main .box-title .txt-icon{
+
+main .box-title .txt-icon {
   display: flex;
   gap: 10px
 }
-main .photos .img1 img{
+
+main .photos .img1 img {
   border-radius: 15px 0px 0px 15px;
 }
-main .photos .img3 img{
+
+main .photos .img3 img {
   border-radius: 0px 15px 0px 0px;
 }
-main .photos .img5 img{
+
+main .photos .img5 img {
   border-radius: 0px 0px 15px 0px;
 }
-main .show-photos{
+
+main .show-photos {
   display: flex;
   position: absolute;
   right: 320px;
@@ -167,11 +173,13 @@ main .show-photos{
   border: 1px solid black;
   border-radius: 10px;
 }
+
 .box-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .box-title--btns {
   display: flex;
 }
@@ -221,43 +229,53 @@ main .show-photos{
   grid-row: 1 / 3;
   grid-column: 1 / 3;
 }
-main .main-info{
+
+main .main-info {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 100%;
   margin-top: 3%;
 }
-main .main-info .main-info-left{
+
+main .main-info .main-info-left {
   grid-column: 1 / 3;
 }
-main .main-info .main-info-right{
+
+main .main-info .main-info-right {
   grid-column: 3 / 4;
 }
-main .main-info .main-info-left h3{
+
+main .main-info .main-info-left h3 {
   font-size: 1.4rem;
 }
-main .main-info .main-info-right p{
+
+main .main-info .main-info-right p {
   font-weight: 300;
 }
-main .main-info .main-info-right .price{
+
+main .main-info .main-info-right .price {
   display: flex;
   align-items: end;
   gap: 5px;
 }
-main .main-info .main-info-right{
+
+main .main-info .main-info-right {
   border: 1px solid rgb(221, 221, 221);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
   padding: 24px 24px 0 24px;
   border-radius: 12px;
 }
-main .main-info .main-info-right .price h3{
+
+main .main-info .main-info-right .price h3 {
   font-size: 1.5rem;
 }
-main .main-info .main-info-right .price h5{
+
+main .main-info .main-info-right .price h5 {
   font-weight: 300;
   font-size: 1.1rem;
 }
-main .main-info .main-info-right .info{
+
+main .main-info .main-info-right .info {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
@@ -265,31 +283,38 @@ main .main-info .main-info-right .info{
   border-radius: 10px;
   margin-top: 5%;
 }
-main .main-info .main-info-right .top-left{  
+
+main .main-info .main-info-right .top-left {
   border-right: 1px solid rgb(139, 139, 139);
 }
-main .main-info .main-info-right .info-txt{
+
+main .main-info .main-info-right .info-txt {
   padding: 13px 10px 13px 10px;
 }
-main .main-info .main-info-right .info-txt h6{
+
+main .main-info .main-info-right .info-txt h6 {
   font-weight: 400;
   font-size: 0.7rem;
   margin-bottom: 0px
 }
-main .main-info .main-info-right .info-txt p{
+
+main .main-info .main-info-right .info-txt p {
   font-size: 1rem;
 }
-main .main-info .main-info-right .bottom{
+
+main .main-info .main-info-right .bottom {
   grid-column: 1 / 3;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid rgb(139, 139, 139);
 }
-main .main-info .main-info-right .bottom svg{
+
+main .main-info .main-info-right .bottom svg {
   width: 20px;
   margin-right: 10px;
 }
-main .main-info .main-info-right .btn{
+
+main .main-info .main-info-right .btn {
   color: white;
   text-decoration: none;
   background-color: #E61E4D;
@@ -299,41 +324,49 @@ main .main-info .main-info-right .btn{
   padding: 20px 0 20px 0;
   margin-top: 20px;
   border-radius: 10px;
+  font-weight: bolder;
 }
-main .main-info .main-info-right .charge{
+
+main .main-info .main-info-right .charge {
   text-align: center;
   margin: 15px 0 20px 0;
 }
-main .main-info .main-info-right .information{
+
+main .main-info .main-info-right .information {
   display: flex;
   flex-direction: column;
 }
-main .main-info .main-info-right .information::after{
+
+main .main-info .main-info-right .information::after {
   content: "";
   background-color: #c1c1c1;
   width: 100%;
   height: 1px;
   margin-top: 13px;
 }
-main .main-info .main-info-right .information-txt{
+
+main .main-info .main-info-right .information-txt {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
   margin: 6px 0 6px 0;
 }
-main .main-info .main-info-right .information-txt h6{
+
+main .main-info .main-info-right .information-txt h6 {
   font-weight: 300;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
-main .main-info .main-info-right .totalcharge{
+
+main .main-info .main-info-right .totalcharge {
   display: flex;
   justify-content: space-between;
   margin: 25px 0 16px 0;
   color: #353535;
 }
-main .main-info .main-info-left .evaluation{
+
+main .main-info .main-info-left .evaluation {
   display: flex;
   margin: 30px;
   width: 720px;
@@ -343,30 +376,36 @@ main .main-info .main-info-left .evaluation{
   border: 1px solid #c7c7c7;
   border-radius: 10px;
 }
-main .main-info .main-info-left .evaluation .guest-favorite{
+
+main .main-info .main-info-left .evaluation .guest-favorite {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-main .main-info .main-info-left .evaluation .guest-favorite p{
+
+main .main-info .main-info-left .evaluation .guest-favorite p {
   font-weight: bold;
   font-size: 1.1rem;
   margin: 0 10px 0 10px
 }
-main .main-info .main-info-left .evaluation .details{
+
+main .main-info .main-info-left .evaluation .details {
   width: 30%
 }
-main .main-info .main-info-left .evaluation .details p{
+
+main .main-info .main-info-left .evaluation .details p {
   font-weight: bold;
 }
-main .main-info .main-info-left .evaluation .evaluation-stars{
+
+main .main-info .main-info-left .evaluation .evaluation-stars {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-main .main-info .main-info-left .evaluation .evaluation-stars .stars::after{
+
+main .main-info .main-info-left .evaluation .evaluation-stars .stars::after {
   content: "";
   width: 1px;
   height: 40px;
@@ -375,51 +414,145 @@ main .main-info .main-info-left .evaluation .evaluation-stars .stars::after{
   margin-top: -30px;
   margin-left: 80px;
 }
-main .main-info .main-info-left .evaluation .evaluation-stars p{
+
+main .main-info .main-info-left .evaluation .evaluation-stars p {
   font-weight: bold;
   font-size: 20px;
 }
-main .main-info .main-info-left .evaluation .evaluation-stars .stars{
+
+main .main-info .main-info-left .evaluation .evaluation-stars .stars {
   display: flex;
   gap: 3px;
   margin-top: 5px;
 }
-main .main-info .main-info-left .evaluation .evaluation-quantity{
+
+main .main-info .main-info-left .evaluation .evaluation-quantity {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main .main-info .main-info-left .evaluation .evaluation-quantity h6{
+
+main .main-info .main-info-left .evaluation .evaluation-quantity h6 {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 0;
   margin-top: 5px
 }
-main .main-info .main-info-left .evaluation .evaluation-quantity p{
+
+main .main-info .main-info-left .evaluation .evaluation-quantity p {
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
-main .main-info .main-info-left .host{
+
+main .main-info .main-info-left .host {
   display: flex;
   margin: 30px;
   align-items: center;
 }
-main .main-info .main-info-left .host .host-photo img{
+
+main .main-info .main-info-left .host .host-photo img {
   width: 50px;
   height: 50px;
   border-radius: 100px;
   object-fit: cover;
 }
-main .main-info .main-info-left .host .host-photo svg{
+
+main .main-info .main-info-left .host .host-photo svg {
   position: absolute;
   transform: translate(34px, -17px);
 }
-main .main-info .main-info-left .host .host-txt{
+
+main .main-info .main-info-left .host .host-txt {
   margin-left: 30px;
 }
-main .main-info .main-info-left .host .host-txt h6{
+
+main .main-info .main-info-left .host .host-txt h6 {
   font-weight: bold;
 }
-main .main-info .main-info-left .host .host-txt p{
+
+main .main-info .main-info-left .host .host-txt p {
   color: #717171
+}
+
+main .main-info .main-info-left .house-info {
+  margin: 50px 50px 0 50px;
+}
+
+main .main-info .main-info-left .house-info::before {
+  content: "";
+  background-color: #c1c1c1;
+  width: 700px;
+  height: 0.5px;
+  position: absolute;
+  margin-top: -30px;
+}
+
+.line::after {
+  content: "";
+  background-color: #c1c1c1;
+  width: 700px;
+  height: 0.5px;
+  display: inline-block;
+  margin: 35px 0 35px 0;
+}
+
+main .main-info .main-info-left .house-info .house-info-sec {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+main .main-info .main-info-left .house-info .house-info-sec:not(:last-child) {
+  margin: 0 0 35px 0;
+}
+
+main .main-info .main-info-left .house-info .house-info-sec svg {
+  margin: 0 35px 0 0;
+}
+
+main .main-info .main-info-left .house-info .house-info-sec .house-text h6 {
+  font-weight: bolder;
+}
+
+main .main-info .main-info-left .house-description {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 47px;
+}
+
+main .main-info .main-info-left .house-description .translate {
+  display: flex;
+  width: 700px;
+  padding: 2% 5% 2% 5%;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  margin: 0 0 30px 0;
+}
+
+main .main-info .main-info-left .house-description .translate a {
+  color: black;
+  margin-left: 1%;
+  font-weight: bolder;
+}
+
+main .main-info .main-info-left .house-description .description {
+  display: flex;
+  flex-direction: column;
+  line-height: 25px;
+  width: 700px;
+}
+
+main .main-info .main-info-left .house-description .description h6 {
+  display: flex;
+  align-items: center;
+  margin: 20px 0 20px 0;
+}
+
+main .main-info .main-info-left .house-description .description h6 a {
+  color: black;
+  font-weight: bolder;
+}
+
+main .main-info .main-info-left .house-description .description h6 svg {
+  margin-left: 5px;
 }
