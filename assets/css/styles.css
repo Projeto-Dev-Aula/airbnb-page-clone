@@ -333,3 +333,93 @@ main .main-info .main-info-right .totalcharge{
   margin: 25px 0 16px 0;
   color: #353535;
 }
+main .main-info .main-info-left .evaluation{
+  display: flex;
+  margin: 30px;
+  width: 720px;
+  padding: 30px 26px;
+  justify-content: space-around;
+  cursor: pointer;
+  border: 1px solid #c7c7c7;
+  border-radius: 10px;
+}
+main .main-info .main-info-left .evaluation .guest-favorite{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main .main-info .main-info-left .evaluation .guest-favorite p{
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0 10px 0 10px
+}
+main .main-info .main-info-left .evaluation .details{
+  width: 30%
+}
+main .main-info .main-info-left .evaluation .details p{
+  font-weight: bold;
+}
+main .main-info .main-info-left .evaluation .evaluation-stars{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .main-info .main-info-left .evaluation .evaluation-stars .stars::after{
+  content: "";
+  width: 1px;
+  height: 40px;
+  background-color: #c7c7c7;
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 80px;
+}
+main .main-info .main-info-left .evaluation .evaluation-stars p{
+  font-weight: bold;
+  font-size: 20px;
+}
+main .main-info .main-info-left .evaluation .evaluation-stars .stars{
+  display: flex;
+  gap: 3px;
+  margin-top: 5px;
+}
+main .main-info .main-info-left .evaluation .evaluation-quantity{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .main-info .main-info-left .evaluation .evaluation-quantity h6{
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  margin-top: 5px
+}
+main .main-info .main-info-left .evaluation .evaluation-quantity p{
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+main .main-info .main-info-left .host{
+  display: flex;
+  margin: 30px;
+  align-items: center;
+}
+main .main-info .main-info-left .host .host-photo img{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+main .main-info .main-info-left .host .host-photo svg{
+  position: absolute;
+  transform: translate(34px, -17px);
+}
+main .main-info .main-info-left .host .host-txt{
+  margin-left: 30px;
+}
+main .main-info .main-info-left .host .host-txt h6{
+  font-weight: bold;
+}
+main .main-info .main-info-left .host .host-txt p{
+  color: #717171
+}
