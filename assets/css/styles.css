@@ -264,6 +264,7 @@ main .main-info .main-info-right {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
   padding: 24px 24px 0 24px;
   border-radius: 12px;
+  height: fit-content;
 }
 
 main .main-info .main-info-right .price h3 {
