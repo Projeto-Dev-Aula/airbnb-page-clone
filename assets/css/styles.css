@@ -233,7 +233,7 @@ main .show-photos {
 main .main-info {
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 100%;
+  grid-template-rows: fit-content;
   margin-top: 3%;
 }
 
@@ -497,6 +497,15 @@ main .main-info .main-info-left .house-info::before {
   margin: 35px 0 35px 0;
 }
 
+.line-full::after {
+  content: "";
+  background-color: #c1c1c1;
+  width: 200%;
+  height: 0.5px;
+  display: inline-block;
+  margin: 35px 0 35px 0;
+}
+
 main .main-info .main-info-left .house-info .house-info-sec {
   display: flex;
   flex-direction: row;
@@ -556,4 +565,114 @@ main .main-info .main-info-left .house-description .description h6 a {
 
 main .main-info .main-info-left .house-description .description h6 svg {
   margin-left: 5px;
+}
+main .main-info .main-info-left .room{
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 45px
+}
+main .main-info .main-info-left .room h3{
+  font-weight: bold;
+}
+main .main-info .main-info-left .room .room-info{
+  border: 1px solid #c7c7c7;
+  padding: 30px;
+  width: 34%;
+  margin: 10px 0 10px 0;
+  border-radius: 10px;
+}
+main .main-info .main-info-left .room .room-info .beds{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0 0 15px 0;
+}
+main .main-info .main-info-left .room .room-info h6{
+  font-weight: bolder;
+}
+main .main-info .main-info-left .benefits{
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 45px;
+  width: 530px;
+}
+main .main-info .main-info-left .benefits h3{
+  font-weight: bolder;
+}
+main .main-info .main-info-left .benefits .benefits-list{
+  display: flex;
+  justify-content: space-between;
+}
+main .main-info .main-info-left .benefits .benefits-list .benefits-item{
+  display: flex;
+  padding: 10px 0 10px 0;
+  align-items: center;
+  width: 67%;
+  justify-content: start;
+}
+main .main-info .main-info-left .benefits .benefits-list .benefits-item p{
+  margin: 0 0 0 20px;
+}
+main .main-info .main-info-left .benefits .benefits-list .benefits-item .line-through{
+  text-decoration: line-through;
+}
+main .main-info .main-info-left .benefits .all-benefits h6{
+  font-weight: bolder;
+  padding: 15px 30px 15px 30px;
+  border: 1px solid #000000;
+  width: 70%;
+  margin: 20px 0 20px 0;
+  border-radius: 10px;
+}
+main .main-info .comments{
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  display: flex;
+  margin: 10px 0 100px 45px;
+}
+main .main-info .comments .comment{
+  width: 50%;
+}
+main .main-info .comments .comment .profile{
+  display: flex;
+}
+main .main-info .comments .comment .profile img{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+main .main-info .comments .comment .profile .profile-info{
+  margin: 0 0 0 15px
+}
+main .main-info .comments .comment .profile .profile-info h5{
+  font-weight: bolder;
+  font-size: 1rem;
+}
+main .main-info .comments .comment .profile .profile-info p{
+  font-size: 0.9rem;
+}
+main .main-info .comments .rating{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main .main-info .comments .rating h6{
+  font-weight: bolder;
+  align-items: center;
+  margin: 0 0 0 5px;
+}
+main .main-info .comments .rating p{
+  font-size: 1rem;
+  color: #717171;
+  margin: 0 0 0 5px;
+}
+main .main-info .comments .comment-text{
+  line-height: 20px;
+  margin: 5px 0 0 0;
+}
+main .main-info .comments .comment-text h6{
+  font-weight: bolder;
+  text-decoration: underline;
+  margin: 10px 0 0 0;
 }
