@@ -119,6 +119,7 @@ q:after {
   display: flex;
   align-items: center;
   gap: 20px;
+  position: relative;
 }
 
 .menu .right-bar p {
@@ -131,6 +132,12 @@ q:after {
   padding: 8px 8px 8px 14px;
   border: 1px solid #dddddd;
   border-radius: 30px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.menu .menu-hmbr:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
 }
 
 .menu .menu-hmbr .menu-user-icon {
@@ -148,23 +155,11 @@ main .box-title .txt-icon {
   gap: 10px
 }
 
-main .photos .img1 img {
-  border-radius: 15px 0px 0px 15px;
-}
-
-main .photos .img3 img {
-  border-radius: 0px 15px 0px 0px;
-}
-
-main .photos .img5 img {
-  border-radius: 0px 0px 15px 0px;
-}
-
 main .show-photos {
   display: flex;
   position: absolute;
-  right: 320px;
-  top: 500px;
+  right: 2%;
+  top: 88%;
   cursor: pointer;
   background-color: white;
   width: fit-content;
@@ -201,16 +196,10 @@ main .show-photos {
 }
 
 .photos {
-  display: grid;
-  grid-template-rows: 180px 180px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 370px;
   margin-top: 20px;
   gap: 10px;
-}
-
-.photos div {
-  width: 100%;
-  height: 100%;
+  position: relative;
 }
 
 .photos img {
@@ -219,15 +208,26 @@ main .show-photos {
   object-fit: cover;
   cursor: pointer;
   transition: filter 0.3s;
+  border-radius: 15px;
 }
 
 .photos img:hover {
   filter: brightness(80%);
 }
 
-.photos .img1 {
-  grid-row: 1 / 3;
-  grid-column: 1 / 3;
+.photos .arrow {
+  background-color: rgba(234, 234, 234, 0.7);
+  border: none;
+  position: absolute;
+  top: 50%;
+}
+
+.arrow-right {
+  right: 2%;
+}
+
+.arrow-left {
+  left: 2%;
 }
 
 main .main-info {
@@ -627,8 +627,11 @@ main .main-info .main-info-left .benefits .all-benefits h6{
 main .main-info .comments{
   grid-column: 1 / 4;
   grid-row: 2 / 3;
+
   display: flex;
+  flex-wrap: wrap;
   margin: 10px 0 100px 45px;
+
 }
 main .main-info .comments .comment{
   width: 50%;
@@ -701,4 +704,65 @@ main .main-info .house-rules .show-more h6{
   font-weight: bolder;
   text-decoration: underline;
   margin: 0;
+}
+
+.menu-dropdown {
+  margin-top: 34px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  padding: 8px 0;
+  position: absolute;
+  z-index: 2;
+  min-width: 240px;
+  max-height: calc(100vh - 100px);
+  top: 45%;
+  right: 0;
+  display: none;
+}
+
+.menu-dropdown nav a {
+  color: #222;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+  display: block;
+}
+
+.menu-dropdown nav a:hover {
+  background-color: #F7F7F7;
+}
+
+.menu-dropdown nav a:first-of-type {
+  font-weight: bold;
+}
+
+.menu-dropdown-line {
+  height: 1px;
+  background-color: #DDDDDD;
+  margin: 8px 0;
+}
+
+.save-button {
+  background-color: transparent;
+  text-decoration: underline;
+  border: none;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.save-button:hover {
+  background-color: #F7F7F7;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
