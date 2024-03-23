@@ -84,94 +84,68 @@ const comments = [
     whenStay: '• janeiro de 2024'
   }
 ]
-const container = document.querySelector('.comments')
-
+const commentsContainer = document.querySelector('.comments')
 comments.forEach(comment => {
-  const commentElement = document.createElement('div')
-  commentElement.classList.add('comment')
+  const commentElement = document.createElement('div');
+  commentElement.classList.add('comment');
 
-  const profile = document.createElement('div')
-  profile.classList.add('profile')
+  const profile = document.createElement('div');
+  profile.classList.add('profile');
 
-  const profileImg = document.createElement('img')
-  profileImg.src = comment.photo
-  profileImg.alt = comment.name
+  profile.innerHTML = `
+    <img src="${comment.photo}" alt="${comment.name}">
+    <div class="profile-info">
+      <h5>${comment.name}</h5>
+      <p>${comment.country}</p>
+      <h6>• ${comment.howLongStay}</h6>
+      <p>• ${comment.whenStay}</p>
+    </div>
+  `;
 
-  const profileInfo = document.createElement('div')
-  profileInfo.classList.add('profile-info')
+  const rating = document.createElement('div');
+  rating.classList.add('rating');
 
-  const name = document.createElement('h5')
-  name.textContent = comment.name
-
-  const country = document.createElement('p')
-  country.textContent = comment.country
-
-  profileInfo.appendChild(name)
-  profileInfo.appendChild(country)
-
-  profile.appendChild(profileImg)
-  profile.appendChild(profileInfo)
-
-  const rating = document.createElement('div')
-  rating.classList.add('rating')
-
+  let stars = '';
   for (let i = 0; i < comment.stars; i++) {
-    const star = document.createElement('svg')
-    star.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-    star.setAttribute('viewBox', '0 0 32 32')
-    star.setAttribute('aria-hidden', 'true')
-    star.setAttribute('role', 'presentation')
-    star.setAttribute('focusable', 'false')
-    star.style.display = 'block'
-    star.style.height = '0.5625rem'
-    star.style.width = '0.5625rem'
-
-    const path = document.createElement('path')
-    path.setAttribute('fill-rule', 'evenodd')
-    path.setAttribute('d', 'm15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z')
-
-    star.appendChild(path)
-    rating.appendChild(star)
+    stars += '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 0.5625rem; width: 0.5625rem; fill: var(--f-k-smk-x);"><path fill-rule="evenodd" d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"></path></svg>';
   }
+  rating.innerHTML = stars;
 
-  const howLongStay = document.createElement('h6')
-  howLongStay.textContent = comment.howLongStay
+  const commentText = document.createElement('div');
+  commentText.classList.add('comment-text');
 
-  const whenStay = document.createElement('p')
-  whenStay.textContent = comment.whenStay
+  const message = document.createElement('p');
+  message.textContent = comment.message;
+  commentText.appendChild(message);
 
-  const commentText = document.createElement('div')
-  commentText.classList.add('comment-text')
-  commentText.appendChild(howLongStay)
-  commentText.appendChild(whenStay)
+  const showMoreButton = document.createElement('h6');
+  showMoreButton.textContent = 'Mostrar mais';
+  commentText.appendChild(showMoreButton);
 
-  const message = document.createElement('p')
-  message.textContent = comment.message
-  commentText.insertBefore(message, howLongStay)
+  commentElement.appendChild(profile);
+  commentElement.appendChild(rating);
+  commentElement.appendChild(commentText);
 
-  commentElement.appendChild(profile)
-  commentElement.appendChild(rating)
-  commentElement.appendChild(commentText)
+  commentsContainer.appendChild(commentElement);
+});
 
-  container.appendChild(commentElement)
-})
 let indexImg = 0
 const imgElement = document.querySelector('.photos img')
-imgElement.setAttribute('src', imagesArrays[indexImg].src)
-imgElement.setAttribute('alt', imagesArrays[indexImg].alt)
+imgElement.src = imagesArrays[indexImg].src
+imgElement.alt = imagesArrays[indexImg].alt
 
 const prevImage = () => {
   if (indexImg >= 1) indexImg--
   else indexImg = imagesArrays.length - 1
-  imgElement.setAttribute('src', imagesArrays[indexImg].src)
-  imgElement.setAttribute('alt', imagesArrays[indexImg].alt)
+  imgElement.src = imagesArrays[indexImg].src
+  imgElement.alt = imagesArrays[indexImg].alt
 }
 
 const nextImage = () => {
   if (indexImg < imagesArrays.length - 1) indexImg++
   else indexImg = 0
-  imgElement.setAttribute('src', imagesArrays[indexImg].src)
-  imgElement.setAttribute('alt', imagesArrays[indexImg].alt)
+  imgElement.src = imagesArrays[indexImg].src
+  imgElement.alt = imagesArrays[indexImg].alt
 }
 
 if (window.localStorage.getItem('propriedadeSalva')) {
