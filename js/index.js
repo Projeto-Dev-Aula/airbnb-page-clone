@@ -30,15 +30,6 @@ const comments = [
     whenStay: '• janeiro de 2024'
   },
   {
-    name: 'Vitória',
-    country: 'Brasil',
-    message: 'Atendeu muito além das minhas expectativas! busquei por um local tranquilo e aconchegante e encontrei o lugar perfeito. me senti numa casinha de bonecas, é tudo muito...',
-    stars: 5,
-    photo: 'assets/images/vitoria.webp',
-    howLongStay: '• Ficou algumas noites',
-    whenStay: '• 3 semanas atrás'
-  },
-  {
     name: 'Thiago',
     country: 'Brasil',
     message: 'Perfeição define....',
@@ -57,15 +48,6 @@ const comments = [
     whenStay: '• 3 semanas atrás'
   },
   {
-    name: 'Thiago',
-    country: 'Brasil',
-    message: 'Perfeição define....',
-    stars: 5,
-    photo: 'assets/images/thiago.webp',
-    howLongStay: '• Ficou algumas noites',
-    whenStay: '• janeiro de 2024'
-  },
-  {
     name: 'Vitória',
     country: 'Brasil',
     message: 'Atendeu muito além das minhas expectativas! busquei por um local tranquilo e aconchegante e encontrei o lugar perfeito. me senti numa casinha de bonecas, é tudo muito...',
@@ -82,52 +64,73 @@ const comments = [
     photo: 'assets/images/thiago.webp',
     howLongStay: '• Ficou algumas noites',
     whenStay: '• janeiro de 2024'
+  },
+  {
+    name: 'Thiago',
+    country: 'Brasil',
+    message: 'Perfeição define....',
+    stars: 5,
+    photo: 'assets/images/thiago.webp',
+    howLongStay: '• Ficou algumas noites',
+    whenStay: '• janeiro de 2024'
+  },
+  {
+    name: 'Vitória',
+    country: 'Brasil',
+    message: 'Atendeu muito além das minhas expectativas! busquei por um local tranquilo e aconchegante e encontrei o lugar perfeito. me senti numa casinha de bonecas, é tudo muito...',
+    stars: 5,
+    photo: 'assets/images/vitoria.webp',
+    howLongStay: '• Ficou algumas noites',
+    whenStay: '• 3 semanas atrás'
   }
 ]
+
 const commentsContainer = document.querySelector('.comments')
 comments.forEach(comment => {
-  const commentElement = document.createElement('div');
-  commentElement.classList.add('comment');
+  const commentElement = document.createElement('div')
+  commentElement.classList.add('comment')
 
-  const profile = document.createElement('div');
-  profile.classList.add('profile');
+  const profile = document.createElement('div')
+  profile.classList.add('profile')
 
   profile.innerHTML = `
     <img src="${comment.photo}" alt="${comment.name}">
     <div class="profile-info">
       <h5>${comment.name}</h5>
       <p>${comment.country}</p>
-      <h6>• ${comment.howLongStay}</h6>
-      <p>• ${comment.whenStay}</p>
     </div>
-  `;
+  `
 
-  const rating = document.createElement('div');
-  rating.classList.add('rating');
+  const rating = document.createElement('div')
+  rating.classList.add('rating')
 
-  let stars = '';
+  let stars = ''
   for (let i = 0; i < comment.stars; i++) {
-    stars += '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 0.5625rem; width: 0.5625rem; fill: var(--f-k-smk-x);"><path fill-rule="evenodd" d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"></path></svg>';
+    stars += '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 0.5625rem; width: 0.5625rem;"><path fill-rule="evenodd" d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"></path></svg>'
   }
-  rating.innerHTML = stars;
+  rating.innerHTML = `
+    ${stars}
+    <h6>${comment.howLongStay}</h6>
+    <p>${comment.whenStay}</p>
+  `
 
-  const commentText = document.createElement('div');
-  commentText.classList.add('comment-text');
+  const commentText = document.createElement('div')
+  commentText.classList.add('comment-text')
 
-  const message = document.createElement('p');
-  message.textContent = comment.message;
-  commentText.appendChild(message);
+  const message = document.createElement('p')
+  message.textContent = comment.message
+  commentText.appendChild(message)
 
-  const showMoreButton = document.createElement('h6');
-  showMoreButton.textContent = 'Mostrar mais';
-  commentText.appendChild(showMoreButton);
+  const showMoreButton = document.createElement('h6')
+  showMoreButton.textContent = 'Mostrar mais'
+  commentText.appendChild(showMoreButton)
 
-  commentElement.appendChild(profile);
-  commentElement.appendChild(rating);
-  commentElement.appendChild(commentText);
+  commentElement.appendChild(profile)
+  commentElement.appendChild(rating)
+  commentElement.appendChild(commentText)
 
-  commentsContainer.appendChild(commentElement);
-});
+  commentsContainer.appendChild(commentElement)
+})
 
 let indexImg = 0
 const imgElement = document.querySelector('.photos img')

@@ -627,14 +627,13 @@ main .main-info .main-info-left .benefits .all-benefits h6{
 main .main-info .comments{
   grid-column: 1 / 4;
   grid-row: 2 / 3;
-
-  display: flex;
   flex-wrap: wrap;
+  display: flex;
+  gap: 40px;
   margin: 10px 0 100px 45px;
-
 }
 main .main-info .comments .comment{
-  width: 50%;
+  width: 40%;
 }
 main .main-info .comments .comment .profile{
   display: flex;
